@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --clr-bg-dark: #1f2937; /* gray-800 */
+    --clr-bg-light: #fafafa; /* zinc-50 */
+
+    --clr-text-dark: #1f2937; /* gray-200 */
+    --clr-text-light: #fafafa; /* zinc-50 */
+    --rdp-accent-color: #1f2937; /* gray-800 */
+}
+
+.dark {
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text-light);
+}
+
+.light {
+    background-color: var(--clr-bg-light);
+    color: var(--clr-text-light);
+}
+
+.epoch-input::-webkit-inner-spin-button,
+.epoch-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.rdp {
+    --rdp-cell-size: 28px;
+    justify-content: start;
+    align-items: start;
+    width: 100px;
+    display: block;
+    margin: 0 ;
+    padding: 0;
+}
+.rdp-caption_label {
+    font-size: 15px;
+}
+
+.rdp-day_selected,
+.rdp-day_selected:hover,
+.rdp-day:hover {
+    background: white;
+    color: black;
+}
+
+.rdp-day_selected  {
+    --rdp-accent-color: white; /* gray-800 */
+    --rdp-selected-color: black; /* zinc-50 */
+}
+
+
+.rdp-nav_button {
+    width: 25px;
+    height: 25px;
+}
+.rdp-month {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    width: 100vw;
+}

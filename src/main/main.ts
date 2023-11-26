@@ -1,5 +1,7 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, Tray, Menu } from 'electron';
+import positioner from 'electron-traywindow-positioner';
 import path from 'path';
+import MenuBuilder from './menu.ts';
 
 /** Handle creating/removing shortcuts on Windows when installing/uninstalling. */
 if (require('electron-squirrel-startup')) {
@@ -10,6 +12,7 @@ if (require('electron-squirrel-startup')) {
  * Main window instance.
  */
 let mainWindow: BrowserWindow | null;
+let tray: Tray | null;
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
 
@@ -18,7 +21,13 @@ declare const MAIN_WINDOW_VITE_NAME: string;
  * initialization and is ready to create browser windows.
  * Some APIs can only be used after this event occurs.
  */
-app.on('ready', createMainWindow);
+app.on('ready', () => {
+  if (process.platform === 'darwin') {
+    app.dock.hide();
+  }
+  // createMainWindow();
+  createTray();
+});
 
 /**
  * Emitted when the application is activated. Various actions can
@@ -26,15 +35,16 @@ app.on('ready', createMainWindow);
  * attempting to re-launch the application when it's already running,
  * or clicking on the application's dock or taskbar icon.
  */
-app.on('activate', () => {
-  /**
-   * On OS X it's common to re-create a window in the app when the
-   * dock icon is clicked and there are no other windows open.
-   */
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createMainWindow();
-  }
-});
+// app.on('activate', () => {
+//   /**
+//    * On OS X it's common to re-create a window in the app when the
+//    * dock icon is clicked and there are no other windows open.
+//    */
+//   if (BrowserWindow.getAllWindows().length === 0) {
+//     createMainWindow();
+//     createTray();
+//   }
+// });
 
 /**
  * Emitted when all windows have been closed.
@@ -54,13 +64,35 @@ app.on('window-all-closed', () => {
  * @returns {BrowserWindow} Main window instance
  */
 
+const createTray = () => {
+  tray = new Tray(path.resolve('assets/img.png'));
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      label: 'Quit',
+      accelerator: 'Command+Q',
+      click: () => {
+        app.quit();
+      },
+    },
+  ]);
+  tray.setToolTip('Epocher');
+  tray.setContextMenu(contextMenu);
+  tray.on('click', () => {
+    if (!mainWindow) {
+      createMainWindow();
+    }
+    showWindow();
+  });
+};
+
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    width: 860,
+    width: 360,
     height: 600,
-    backgroundColor: '#202020',
     show: false,
-    autoHideMenuBar: true,
+    frame: false,
+    resizable: false,
+    // autoHideMenuBar: true,
     icon: path.resolve('assets/favicon.ico'),
     webPreferences: {
       nodeIntegration: false,
@@ -89,11 +121,29 @@ function createMainWindow() {
   // Close all windows when main window is closed
   mainWindow.on('close', () => {
     mainWindow = null;
-    app.quit();
   });
+
+  mainWindow.on('blur', () => {
+    toggleWindow();
+  });
+
+  const menuBuilder = new MenuBuilder(mainWindow);
+  menuBuilder.buildMenu();
 
   return mainWindow;
 }
+
+const showWindow = () => {
+  if (mainWindow instanceof BrowserWindow) {
+    positioner.position(mainWindow, <Electron.Rectangle>tray?.getBounds());
+  }
+  mainWindow?.show();
+};
+
+const toggleWindow = () => {
+  if (mainWindow?.isVisible()) return mainWindow.hide();
+  return mainWindow && showWindow();
+};
 
 /**
  * In this file you can include the rest of your app's specific main process code.
