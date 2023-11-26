@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71567186-aa5d-4220-8fca-4ca89bba9219" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/electrovite-round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/electrovite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/forge/forge.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tools/forge/forge.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/menu.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +74,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: copy over some code" />
     <MESSAGE value="chore: add project files" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add project files" />
+    <MESSAGE value="chore: more cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: more cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
