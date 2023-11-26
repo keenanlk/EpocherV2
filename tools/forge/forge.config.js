@@ -5,8 +5,8 @@ const rootDir = process.cwd();
 module.exports = {
   packagerConfig: {
     asar: false,
-    executableName: 'ElectroVite',
-    appCopyright: 'Copyright (C) 2023 Guasam, ElectroVite',
+    executableName: 'Epocher',
+    appCopyright: 'Copyright (C) 2023 Kaufman, Epocher',
     icon: path.resolve('assets/favicon.ico'),
   },
   rebuildConfig: {},

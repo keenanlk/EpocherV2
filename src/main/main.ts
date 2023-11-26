@@ -35,16 +35,15 @@ app.on('ready', () => {
  * attempting to re-launch the application when it's already running,
  * or clicking on the application's dock or taskbar icon.
  */
-// app.on('activate', () => {
-//   /**
-//    * On OS X it's common to re-create a window in the app when the
-//    * dock icon is clicked and there are no other windows open.
-//    */
-//   if (BrowserWindow.getAllWindows().length === 0) {
-//     createMainWindow();
-//     createTray();
-//   }
-// });
+app.on('activate', () => {
+  /**
+   * On OS X it's common to re-create a window in the app when the
+   * dock icon is clicked and there are no other windows open.
+   */
+  if (BrowserWindow.getAllWindows().length === 0) {
+    createTray();
+  }
+});
 
 /**
  * Emitted when all windows have been closed.
@@ -65,7 +64,7 @@ app.on('window-all-closed', () => {
  */
 
 const createTray = () => {
-  tray = new Tray(path.resolve('assets/img.png'));
+  tray = new Tray(path.resolve('assets/epocher.png'));
   const contextMenu = Menu.buildFromTemplate([
     {
       label: 'Quit',
@@ -93,7 +92,7 @@ function createMainWindow() {
     frame: false,
     resizable: false,
     // autoHideMenuBar: true,
-    icon: path.resolve('assets/favicon.ico'),
+    icon: path.resolve('assets/epocher.png'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,

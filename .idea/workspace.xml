@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71567186-aa5d-4220-8fca-4ca89bba9219" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/menu.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/electrovite-round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/electrovite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/favicon.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/renderer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/renderer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/styles/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/styles/reset.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/forge/forge.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tools/forge/forge.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,18 +76,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: copy over some code" />
+    <MESSAGE value="chore: add project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add project files" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main/main.ts</url>
-          <line>83</line>
+          <line>82</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main/main.ts</url>
-          <line>136</line>
+          <line>135</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
