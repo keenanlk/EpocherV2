@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71567186-aa5d-4220-8fca-4ca89bba9219" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/entitlements.mac.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/menu.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/forge/forge.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tools/forge/forge.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/keenankaufman/Documents/electrovite-react/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -39,6 +43,11 @@
     "ts.external.directory.path": "/Users/keenankaufman/Documents/electrovite-react/node_modules/typescript/lib"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -75,7 +84,8 @@
     <MESSAGE value="chore: copy over some code" />
     <MESSAGE value="chore: add project files" />
     <MESSAGE value="chore: more cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: more cleanup" />
+    <MESSAGE value="chore: cleanup menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: cleanup menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

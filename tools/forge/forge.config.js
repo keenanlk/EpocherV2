@@ -7,7 +7,17 @@ module.exports = {
     asar: false,
     executableName: 'Epocher',
     appCopyright: 'Copyright (C) 2023 Kaufman, Epocher',
-    icon: path.resolve('assets/favicon.ico'),
+    icon: path.resolve('assets/epocher.png'),
+    osxSign: {
+      identity: 'Your Developer ID Application Certificate Common Name',
+      'hardened-runtime': true,
+      'gatekeeper-assess': false,
+      entitlements: 'assets/entitlements.mac.plist', // Optional, if you have custom entitlements
+    },
+    osxNotarize: {
+      appleId: process.env.APPLE_ID,
+      appleIdPassword: process.env.APPLE_ID_PASSWORD,
+    },
   },
   rebuildConfig: {},
   makers: [
