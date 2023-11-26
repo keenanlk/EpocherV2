@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const rootDir = process.cwd();
@@ -9,7 +11,8 @@ module.exports = {
     appCopyright: 'Copyright (C) 2023 Kaufman, Epocher',
     icon: path.resolve('assets/epocher.png'),
     osxSign: {
-      identity: 'Your Developer ID Application Certificate Common Name',
+      identity:
+        '3rd Party Mac Developer Installer: Keenan Kaufman (32M2WGCGXB)',
       'hardened-runtime': true,
       'gatekeeper-assess': false,
       entitlements: 'assets/entitlements.mac.plist', // Optional, if you have custom entitlements
